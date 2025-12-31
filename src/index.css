@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -38,20 +34,23 @@ All colors MUST be HSL.
 
     --radius: 0.5rem;
 
+    /* Theme Colors */
+    --theme-red: 0 72% 51%;
+    --theme-red-light: 0 86% 97%;
+    --theme-blue: 217 91% 30%;
+    --theme-blue-light: 214 100% 97%;
+    --theme-pink: 330 67% 52%;
+    --theme-pink-light: 326 100% 97%;
+    --theme-green: 152 69% 31%;
+    --theme-green-light: 152 76% 96%;
+
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -83,6 +82,17 @@ All colors MUST be HSL.
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
+
+    /* Theme Colors Dark */
+    --theme-red: 0 72% 51%;
+    --theme-red-light: 0 50% 15%;
+    --theme-blue: 217 91% 50%;
+    --theme-blue-light: 217 50% 15%;
+    --theme-pink: 330 67% 52%;
+    --theme-pink-light: 330 50% 15%;
+    --theme-green: 152 69% 40%;
+    --theme-green-light: 152 50% 15%;
+
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -101,5 +111,38 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Noto Sans TC', sans-serif;
+  }
+}
+
+@layer utilities {
+  .bg-gradient-hero {
+    background: linear-gradient(135deg, hsl(222 47% 11%) 0%, hsl(215 28% 17%) 100%);
+  }
+
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+}
+
+@layer components {
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.6s ease-out forwards;
+    opacity: 0;
   }
 }

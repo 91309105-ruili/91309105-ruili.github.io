@@ -13,6 +13,9 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['Noto Sans TC', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -56,6 +59,22 @@ export default {
           "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
+        },
+        "theme-red": {
+          DEFAULT: "hsl(var(--theme-red))",
+          light: "hsl(var(--theme-red-light))",
+        },
+        "theme-blue": {
+          DEFAULT: "hsl(var(--theme-blue))",
+          light: "hsl(var(--theme-blue-light))",
+        },
+        "theme-pink": {
+          DEFAULT: "hsl(var(--theme-pink))",
+          light: "hsl(var(--theme-pink-light))",
+        },
+        "theme-green": {
+          DEFAULT: "hsl(var(--theme-green))",
+          light: "hsl(var(--theme-green-light))",
         },
       },
       borderRadius: {
