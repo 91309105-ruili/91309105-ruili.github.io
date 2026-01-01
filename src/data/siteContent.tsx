@@ -2,9 +2,9 @@ import { Play, Film, Tv, BookOpen } from 'lucide-react';
 
 export const siteContent = {
   studentInfo: {
-    class: '進修四技企業管理系2A',
-    studentId: 'A1121500XX',
-    name: '王小明',
+    class: '企二甲',
+    studentId: '91309105',
+    name: '樊靖畇',
   },
   pages: [
     {
